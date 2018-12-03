@@ -238,7 +238,7 @@ class LayoutGraph:
     def first_plot(self):
         ''' Initial plot of the graph'''
         Gplot('set title "Graph drawer')
-        Gplot('set xrange [0: {sz}]; set yrange [0: {sz}]'.format(sz = SZ + 5))             # Leave margin of 5
+        Gplot('set xrange [0: {sz}]; set yrange [0: {sz}]'.format(sz = SZ))
         for pos in self.vertices_positions():
             Gplot('set object circle center {0} size 1 fillcolor rgb "blue" fillstyle solid'.format(pos))
         for (u_pos, v_pos) in self.edges_positions():
@@ -250,7 +250,7 @@ class LayoutGraph:
         Gplot('clear')
         Gplot('reset')
         Gplot('set title "Graph drawer')
-        Gplot('set xrange [0: {sz}]; set yrange [0: {sz}]'.format(sz = SZ + 5))             # Leave margin of 5
+        Gplot('set xrange [0: {sz}]; set yrange [0: {sz}]'.format(sz = SZ))
         for pos in self.vertices_positions():
             Gplot('set object circle center {0} size 1 fillcolor rgb "blue" fillstyle solid'.format(pos))
         for (u_pos, v_pos) in self.edges_positions():
@@ -297,17 +297,6 @@ def graph_file_to_list(file_path):
             if len(edge) == 2 and (edge[0] in vertices and edge[1] in vertices):    
                 edges.append((edge[0], edge[1]))    
     return (vertices, edges)
-
-#def init_graph(path):
-#    '''Takes graph in list form and returns graph object ready to be plotted'''
-#    (V, E) = 
-#    G = graph(V, E)
-#    return G
-
-
-#def plot(path):
-#    G = init_graph(path)
-#    G.plot()
 
 def main():
     parser = argparse.ArgumentParser()
