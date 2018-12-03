@@ -313,28 +313,25 @@ def graph_file_to_list(file_path):
 #    G.plot()
 
 def main():
-    # Definimos los argumentos de lina de comando que aceptamos
     parser = argparse.ArgumentParser()
 
-    # Verbosidad, opcional, False por defecto
     parser.add_argument('-v', '--verbose', 
                         action='store_true', 
                         help='Muestra mas informacion')
-    # Cantidad de iteraciones, opcional, 1000 por defecto
+    # Iterations to be done
     parser.add_argument('--iters', type=int, 
                         help='Cantidad de iteraciones a efectuar', 
                         default=1000)
-    # Cantidad de iteraciones hasta que refresque pantalla
+    # Iterations until draw is refreshed
     parser.add_argument('--refresh', type=int, 
                         help='Cantidad de iteraciones hasta que refresque pantalla', 
                         default=10)
-    # Archivo del cual leer el grafo
+    # Source file (containing graph in list form)
     parser.add_argument('file_name', 
                         help='Archivo del cual leer el grafo a dibujar')
 
     args = parser.parse_args()
 
-    # Creamos nuestro objeto LayoutGraph
     layout_gr = LayoutGraph(
         path=args.file_name,
         iters=args.iters,
@@ -344,7 +341,6 @@ def main():
         verbose=args.verbose
         )
     
-    # Ejecutamos el layout
     layout_gr.layout()
     return
 
