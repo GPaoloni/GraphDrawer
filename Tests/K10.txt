@@ -1,0 +1,56 @@
+10
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+A B
+A C
+A D
+A E
+A F
+A G
+A H
+A I
+A J
+B C
+B D
+B E
+B F
+B G
+B H
+B I
+B J
+C D
+C E
+C F
+C G
+C H
+C I
+C J
+D E
+D F
+D G
+D H
+D I
+D J
+E F
+E G
+E H
+E I
+E J
+F G
+F H
+F I
+F J
+G H
+G I
+G J
+H I
+H J
+I J
