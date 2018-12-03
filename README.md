@@ -7,5 +7,5 @@ Para correr los casos de prueba:
     3) dar pemisos de ejecución ($ sudo chmod -x graph_plotter.py)
     4) correr test.py ($ python test.py)
 
-Para correr casos de prueba alternativos basta con llamar, desde una ubicación con GNUPlot al archivo graph_plotter:
+Para correr casos de prueba alternativos basta con llamar, desde una ubicación con GNUPlot, al archivo graph_plotter:
     $ python graph_ploter "arg_file" (donde "arg_file" es un archivo que contiene un grafo en formato de lista, al igual que los ejemplos en Tests)
