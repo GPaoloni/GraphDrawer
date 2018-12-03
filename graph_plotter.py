@@ -127,10 +127,8 @@ class LayoutGraph:
         '''Takes a pair of vertices names and
            adds the edge as vertex objects pair'''      #Takes str pair for simplicity, as edges came in a list of strings
         (u, v) = e
-        #if u not in self.names():                      #This slows down performance, but avoid lots of runtime errors
         if u not in self:                               #This slows down performance, but avoid lots of runtime errors
             self.add_vertex(vertex(u))
-        #if v not in self.names():                      #Same as above
         if v not in self:                               #Same as above
             self.add_vertex(vertex(v))
         u_ = self.get_vertex(u)
