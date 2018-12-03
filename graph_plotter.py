@@ -107,7 +107,6 @@ class LayoutGraph:
                     return True
         else:
             for v in self.V:
-                #returns true even if we say that the vertex is in another position
                 if v.name() == w:
                     return True
         return False
